@@ -6,3 +6,5 @@
 #include <Windows.h>
 
 HWND SevenSegmentDisplay_Create(HINSTANCE appInstance, HWND parent);
+void SevenSegmentDisplay_SetValue(HWND hwnd, UINT8 value);
+UINT8 SevenSegmentDisplay_GetValue(HWND hwnd);

@@ -236,3 +236,14 @@ HWND SevenSegmentDisplay_Create(const HINSTANCE appInstance, const HWND parent)
 
 	return hwnd;
 }
+
+void SevenSegmentDisplay_SetValue(const HWND hwnd, const UINT8 value)
+{
+	g_propertiesMap[hwnd].value = value;
+	InvalidateRect(hwnd, nullptr, false);
+}
+
+UINT8 SevenSegmentDisplay_GetValue(const HWND hwnd)
+{
+	return g_propertiesMap[hwnd].value;
+}
